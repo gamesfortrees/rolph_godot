@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/Game loops 3.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/background.png" type="Texture" id=2]
+[ext_resource path="res://assets/box_small.png" type="Texture" id=3]
+[ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Objects/Seed.tscn" type="PackedScene" id=6]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 74, 0, 74, 80, 0, 80 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "box_small.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 74, 80 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[node name="Level2" type="Node2D"]
+
+[node name="background_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="background" type="TextureRect" parent="."]
+margin_top = -61.0
+margin_right = 18900.0
+margin_bottom = 1139.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+stretch_mode = 2
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 74, 80 )
+collision_layer = 8
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -524288, 0, 0, -524234, 0, 0, -458752, 0, 0, -458698, 0, 0, -393216, 0, 0, -393162, 0, 0, -327680, 0, 0, -327626, 0, 0, -262144, 0, 0, -262090, 0, 0, -196608, 0, 0, -196554, 0, 0, -131072, 0, 0, -131018, 0, 0, -65536, 0, 0, -65482, 0, 0, 0, 0, 0, 54, 0, 0, 65536, 0, 0, 65590, 0, 0, 131072, 0, 0, 131126, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196638, 0, 0, 196639, 0, 0, 196653, 0, 0, 196662, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262167, 0, 0, 262168, 0, 0, 262169, 0, 0, 262174, 0, 0, 262175, 0, 0, 262188, 0, 0, 262189, 0, 0, 262198, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327703, 0, 0, 327704, 0, 0, 327705, 0, 0, 327710, 0, 0, 327711, 0, 0, 327712, 0, 0, 327713, 0, 0, 327714, 0, 0, 327723, 0, 0, 327724, 0, 0, 327725, 0, 0, 327734, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 393232, 0, 0, 393233, 0, 0, 393234, 0, 0, 393235, 0, 0, 393236, 0, 0, 393237, 0, 0, 393238, 0, 0, 393239, 0, 0, 393240, 0, 0, 393241, 0, 0, 393242, 0, 0, 393243, 0, 0, 393244, 0, 0, 393245, 0, 0, 393246, 0, 0, 393247, 0, 0, 393248, 0, 0, 393249, 0, 0, 393250, 0, 0, 393251, 0, 0, 393252, 0, 0, 393253, 0, 0, 393254, 0, 0, 393255, 0, 0, 393256, 0, 0, 393257, 0, 0, 393258, 0, 0, 393259, 0, 0, 393260, 0, 0, 393261, 0, 0, 393262, 0, 0, 393263, 0, 0, 393264, 0, 0, 393265, 0, 0, 393266, 0, 0, 393267, 0, 0, 393268, 0, 0, 393269, 0, 0, 393270, 0, 0 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1362, 359 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2815, 413 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 326, 301 )
+
+[node name="Seed" parent="." instance=ExtResource( 6 )]
+position = Vector2( 551, 350 )
+
+[node name="Seed2" parent="." instance=ExtResource( 6 )]
+editor/display_folded = true
+position = Vector2( 1094, 436 )
+
+[node name="Seed" parent="Seed2" instance=ExtResource( 6 )]
+position = Vector2( 690, -170 )
