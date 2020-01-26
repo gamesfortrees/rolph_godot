@@ -1,26 +1,25 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://src/Controllers/GameController.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/sounds/Game loops 3.wav" type="AudioStream" id=2]
 [ext_resource path="res://assets/backgrounds/background.png" type="Texture" id=3]
-[ext_resource path="res://assets/backgrounds/sky.png" type="Texture" id=4]
-[ext_resource path="res://assets/box_small.png" type="Texture" id=5]
-[ext_resource path="res://assets/boulders/boulder_small.png" type="Texture" id=6]
-[ext_resource path="res://assets/transparent.png" type="Texture" id=7]
-[ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Objects/Scaffolding.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/Objects/Seed.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/Objects/Portal.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/Levels/Level2.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/Triggers/DialogTrigger.tscn" type="PackedScene" id=14]
-[ext_resource path="res://src/Controllers/DialogController.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/ui/dialog_rolph_2.png" type="Texture" id=16]
-[ext_resource path="res://assets/ui/dialog_rolph_1.png" type="Texture" id=17]
-[ext_resource path="res://assets/ui/dialog_douglas_2.png" type="Texture" id=18]
-[ext_resource path="res://assets/ui/dialog_narrator.png" type="Texture" id=19]
-[ext_resource path="res://src/UI/HUD.tscn" type="PackedScene" id=20]
-[ext_resource path="res://src/UI/GameOver.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/box_small.png" type="Texture" id=4]
+[ext_resource path="res://assets/boulders/boulder_small.png" type="Texture" id=5]
+[ext_resource path="res://assets/transparent.png" type="Texture" id=6]
+[ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Objects/Scaffolding.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Objects/Seed.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Objects/Portal.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Levels/Level2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/Triggers/DialogTrigger.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Controllers/DialogController.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/ui/dialog_rolph_2.png" type="Texture" id=15]
+[ext_resource path="res://assets/ui/dialog_rolph_1.png" type="Texture" id=16]
+[ext_resource path="res://assets/ui/dialog_douglas_2.png" type="Texture" id=17]
+[ext_resource path="res://assets/ui/dialog_narrator.png" type="Texture" id=18]
+[ext_resource path="res://src/UI/HUD.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/UI/GameOver.tscn" type="PackedScene" id=20]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 74, 0, 74, 80, 0, 80 )
@@ -33,7 +32,7 @@ points = PoolVector2Array( 0, 0, 74, 0, 74, 80, 0, 80 )
 
 [sub_resource type="TileSet" id=4]
 0/name = "box_small.png 0"
-0/texture = ExtResource( 5 )
+0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 74, 80 )
@@ -49,7 +48,7 @@ points = PoolVector2Array( 0, 0, 74, 0, 74, 80, 0, 80 )
 } ]
 0/z_index = 0
 1/name = "boulder_small.png 1"
-1/texture = ExtResource( 6 )
+1/texture = ExtResource( 5 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 148, 80 )
@@ -65,7 +64,7 @@ points = PoolVector2Array( 0, 0, 74, 0, 74, 80, 0, 80 )
 } ]
 1/z_index = 0
 2/name = "transparent.png 2"
-2/texture = ExtResource( 7 )
+2/texture = ExtResource( 6 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 74, 80 )
@@ -98,20 +97,12 @@ stream = ExtResource( 2 )
 autoplay = true
 
 [node name="background" type="TextureRect" parent="."]
-margin_top = -444.0
-margin_right = 18900.0
-margin_bottom = 1604.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 2.0
+margin_top = -1183.0
+margin_right = 7944.0
+margin_bottom = 865.0
+rect_scale = Vector2( 0.9, 0.9 )
 texture = ExtResource( 3 )
-stretch_mode = 2
-
-[node name="sky" type="TextureRect" parent="."]
-margin_left = -762.0
-margin_top = -1437.0
-margin_right = 18426.0
-margin_bottom = 563.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
 stretch_mode = 2
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -120,58 +111,60 @@ cell_size = Vector2( 74, 80 )
 collision_layer = 8
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( -524288, 0, 0, -458752, 0, 0, -458677, 0, 0, -393216, 0, 0, -393141, 0, 0, -327680, 0, 0, -327605, 0, 0, -262144, 0, 0, -262069, 0, 0, -196608, 0, 0, -196533, 0, 0, -131072, 0, 0, -130997, 0, 0, -65536, 0, 0, -65461, 0, 0, 0, 0, 0, 75, 0, 0, 65536, 0, 0, 65611, 0, 0, 131072, 0, 0, 131115, 0, 0, 131116, 0, 0, 131117, 0, 0, 131147, 0, 0, 196608, 0, 0, 196651, 0, 0, 196652, 0, 0, 196653, 0, 0, 196680, 0, 0, 196681, 0, 0, 196682, 0, 0, 196683, 0, 0, 262144, 0, 0, 262165, 0, 0, 262166, 0, 0, 262167, 0, 0, 262168, 0, 0, 262169, 0, 0, 262187, 0, 0, 262188, 0, 0, 262189, 0, 0, 262216, 0, 0, 262217, 0, 0, 262218, 0, 0, 262219, 0, 0, 327680, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327701, 0, 0, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 327705, 0, 0, 327710, 0, 0, 327711, 0, 0, 327712, 0, 0, 327713, 0, 0, 327714, 0, 0, 327723, 0, 0, 327724, 0, 0, 327725, 0, 0, 327730, 1, 0, 327752, 0, 0, 327753, 0, 0, 327754, 0, 0, 327755, 0, 0, 393233, 2, 0, 393234, 2, 0, 393235, 2, 0 )
+tile_data = PoolIntArray( -524288, 0, 0, -458752, 0, 0, -458677, 0, 0, -393216, 0, 0, -393141, 0, 0, -327680, 0, 0, -327605, 0, 0, -262144, 0, 0, -262069, 0, 0, -196608, 0, 0, -196533, 0, 0, -131072, 0, 0, -130997, 0, 0, -65536, 0, 0, -65461, 0, 0, 0, 0, 0, 75, 0, 0, 65536, 0, 0, 65611, 0, 0, 131072, 0, 0, 131115, 0, 0, 131116, 0, 0, 131117, 0, 0, 131147, 0, 0, 196608, 0, 0, 196651, 0, 0, 196652, 0, 0, 196653, 0, 0, 196680, 0, 0, 196681, 0, 0, 196682, 0, 0, 196683, 0, 0, 262144, 0, 0, 262165, 0, 0, 262166, 0, 0, 262167, 0, 0, 262168, 0, 0, 262169, 0, 0, 262175, 0, 0, 262176, 0, 0, 262187, 0, 0, 262188, 0, 0, 262189, 0, 0, 262216, 0, 0, 262217, 0, 0, 262218, 0, 0, 262219, 0, 0, 327680, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327701, 0, 0, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 327705, 0, 0, 327710, 0, 0, 327711, 0, 0, 327712, 0, 0, 327713, 0, 0, 327714, 0, 0, 327723, 0, 0, 327724, 0, 0, 327725, 0, 0, 327730, 1, 0, 327752, 0, 0, 327753, 0, 0, 327754, 0, 0, 327755, 0, 0 )
 
-[node name="Enemy" parent="." instance=ExtResource( 8 )]
+[node name="Enemy" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1362, 359 )
 
-[node name="Enemy2" parent="." instance=ExtResource( 8 )]
+[node name="Enemy2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2815, 413 )
 
-[node name="Scaffolding" parent="." instance=ExtResource( 9 )]
+[node name="Scaffolding" parent="." instance=ExtResource( 8 )]
 position = Vector2( 4688, 241 )
 
-[node name="Scaffolding2" parent="." instance=ExtResource( 9 )]
+[node name="Scaffolding2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 4973, 241 )
 
-[node name="Player" parent="." instance=ExtResource( 10 )]
+[node name="Player" parent="." instance=ExtResource( 9 )]
 editor/display_folded = true
 position = Vector2( 302, 301 )
 
 [node name="Camera2D" parent="Player" index="1"]
 limit_right = 5684
 
-[node name="Seed3" parent="." instance=ExtResource( 11 )]
+[node name="Seed3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1825, 281 )
 
-[node name="Seed2" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1094, 436 )
+[node name="Seed2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 588, 346 )
 
-[node name="Portal" parent="." instance=ExtResource( 12 )]
+[node name="Portal" parent="." instance=ExtResource( 11 )]
 position = Vector2( 5467, 215 )
-next_scene = ExtResource( 13 )
+next_scene = ExtResource( 12 )
 
-[node name="DialogTriggerIntro" parent="." instance=ExtResource( 14 )]
+[node name="DialogTriggerIntro" parent="." instance=ExtResource( 13 )]
 position = Vector2( 302, 417 )
 dialoge_file_path = "res://data/dialogs/01_intro.json"
 
 [node name="UI" type="CanvasLayer" parent="."]
+editor/display_folded = true
 layer = 99
 
-[node name="DialogController" parent="UI" instance=ExtResource( 15 )]
+[node name="DialogController" parent="UI" instance=ExtResource( 14 )]
 pause_mode = 2
 visible = false
-rolph_neutral = ExtResource( 16 )
-rolph_scared = ExtResource( 17 )
-douglas_neutral = ExtResource( 18 )
-narrator = ExtResource( 19 )
+rolph_neutral = ExtResource( 15 )
+rolph_scared = ExtResource( 16 )
+douglas_neutral = ExtResource( 17 )
+narrator = ExtResource( 18 )
 
-[node name="HUD" parent="UI" instance=ExtResource( 20 )]
+[node name="HUD" parent="UI" instance=ExtResource( 19 )]
 
-[node name="GameOver" parent="UI" instance=ExtResource( 21 )]
+[node name="GameOver" parent="UI" instance=ExtResource( 20 )]
 visible = false
 
 [node name="Ground" type="StaticBody2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 modulate = Color( 0, 0, 0, 1 )

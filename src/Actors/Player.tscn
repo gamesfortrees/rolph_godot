@@ -64,7 +64,7 @@ max_speed = Vector2( 800, 1400 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 0, -300 )
+position = Vector2( 0, -250 )
 current = true
 limit_left = 0
 limit_top = 0
