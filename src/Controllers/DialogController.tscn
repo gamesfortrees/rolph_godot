@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Controllers/DialogController.gd" type="Script" id=1]
+[ext_resource path="res://assets/ui/dialog_douglas_2.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/dialog_rolph_2.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/dialog_douglas_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/ui/dialog_background.png" type="Texture" id=5]
+[ext_resource path="res://assets/fonts/opensans_regular.tres" type="DynamicFont" id=6]
+
+[node name="DialogController" type="MarginContainer"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -426.0
+margin_bottom = 34.0
+custom_constants/margin_right = 100
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 100
+script = ExtResource( 1 )
+rolph_neutral = ExtResource( 2 )
+douglas_neutral = ExtResource( 3 )
+douglas_angry = ExtResource( 4 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 100.0
+margin_right = 1820.0
+margin_bottom = 360.0
+
+[node name="background" type="NinePatchRect" parent="MarginContainer"]
+margin_right = 1720.0
+margin_bottom = 360.0
+texture = ExtResource( 5 )
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+margin_right = 1720.0
+margin_bottom = 360.0
+custom_constants/margin_right = 50
+custom_constants/margin_left = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer"]
+margin_left = 50.0
+margin_top = 63.0
+margin_right = 1670.0
+margin_bottom = 297.0
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
+margin_right = 254.0
+margin_bottom = 234.0
+custom_constants/margin_right = 20
+
+[node name="avatar" type="TextureRect" parent="MarginContainer/MarginContainer/HBoxContainer/MarginContainer"]
+margin_right = 234.0
+margin_bottom = 234.0
+texture = ExtResource( 4 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
+margin_left = 258.0
+margin_right = 1620.0
+margin_bottom = 234.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 20
+
+[node name="text" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/MarginContainer2"]
+margin_right = 1342.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+text = "This is example text!"
+autowrap = true

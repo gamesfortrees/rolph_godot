@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/game-land.wav-1ff335dbd28bef80f731610d75cd38d2.sample"
+
+[deps]
+
+source_file="res://assets/sounds/game-land.wav"
+dest_files=[ "res://.import/game-land.wav-1ff335dbd28bef80f731610d75cd38d2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

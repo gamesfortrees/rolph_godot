@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/game-planting.wav-d8cf73321946c26699ae4210c80e626d.sample"
+
+[deps]
+
+source_file="res://assets/sounds/game-planting.wav"
+dest_files=[ "res://.import/game-planting.wav-d8cf73321946c26699ae4210c80e626d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

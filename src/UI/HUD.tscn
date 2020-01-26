@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/opensans_bold.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/seed icon.png" type="Texture" id=2]
+
+[node name="HUD" type="MarginContainer"]
+anchor_right = 1.0
+margin_bottom = 229.0
+custom_constants/margin_right = 120
+custom_constants/margin_top = 80
+custom_constants/margin_left = 120
+custom_constants/margin_bottom = 80
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 1800.0
+margin_bottom = 149.0
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 1569.0
+margin_right = 1608.0
+margin_bottom = 69.0
+custom_constants/margin_right = 10
+
+[node name="count" type="Label" parent="HBoxContainer/MarginContainer"]
+margin_right = 29.0
+margin_bottom = 69.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0.654902 )
+text = "0"
+align = 2
+valign = 1
+
+[node name="seed icon" type="TextureRect" parent="HBoxContainer"]
+margin_left = 1612.0
+margin_right = 1680.0
+margin_bottom = 69.0
+texture = ExtResource( 2 )

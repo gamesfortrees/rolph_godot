@@ -1,11 +1,14 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/Game loops 3.wav" type="AudioStream" id=1]
-[ext_resource path="res://assets/background.png" type="Texture" id=2]
+[ext_resource path="res://assets/sounds/Game loops 3.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/backgrounds/background_small.png" type="Texture" id=2]
 [ext_resource path="res://assets/box_small.png" type="Texture" id=3]
 [ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Seed.tscn" type="PackedScene" id=6]
+
+
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 74, 0, 74, 80, 0, 80 )

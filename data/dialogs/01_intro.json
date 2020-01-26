@@ -1,0 +1,62 @@
+[
+    {
+        "name": "",
+        "expression": "",
+        "text": "Rolph wakes up in the middle of the forest. He doesn’t know what happened or how did he end up there… (advance text with 'space')"
+    },
+    {
+        "name": "rolph",
+        "expression": "",
+        "text": "What a terrible headache! Where’s my office?"
+    },
+    {
+        "name": "",
+        "expression": "",
+        "text": "He looks around and sees himself surrounded by a beautiful green forest"
+    },
+    {
+        "name": "rolph",
+        "expression": "",
+        "text": "Oh there are many trees here! Our coal power plants will be replenished after cutting all of them! Let’s call the tree machines quietly before those hippies ruin my plans again!"
+    },
+    {
+        "name": "rolph",
+        "expression": "",
+        "text": "Where is my phone?"
+    },
+    {
+        "name": "",
+        "expression": "",
+        "text": "Suddenly the roar of an excavator calls his attention"
+    },
+    {
+        "name": "rolph",
+        "expression": "",
+        "text": "What is that noise? It hurts my brain and doesn’t let me focus!! Can’t find my phone. Wait a minute, that is one of our machines!! Hey I’m here!!!"
+    },
+    {
+        "name": "",
+        "expression": "",
+        "text": "The machine starts approaching faster and faster without intention of reducing the speed"
+    },
+    {
+        "name": "rolph",
+        "expression": "scared",
+        "text": "What are you doing? Stop!!! That’s enough!! I’m the CEO of the company!!"
+    },
+    {
+        "name": "",
+        "expression": "",
+        "text": "The excavator isn’t stopping and a scared Rolph starts running away"
+    },
+    {
+        "name": "rolph",
+        "expression": "scared",
+        "text": "Why isn’t he stopping? How can’t he recognize me? I have my sexy western German accent, my brown and woody bark, my green long leafs… wait a minute… bark? Leafs? I AM A TREE!!!!!!!"
+    },
+    {
+        "name": "",
+        "expression": "",
+        "text": "Run away from the excavator using 'a' or 'left arrow' and 'd' or 'right arrow' to run and 'space' or 'up arrow' to jump"
+    },
+]
