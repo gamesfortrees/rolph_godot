@@ -1,0 +1,113 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/Actors/Chaser.gd" type="Script" id=1]
+[ext_resource path="res://assets/enemies/machine-arm.png" type="Texture" id=2]
+[ext_resource path="res://assets/enemies/machine-arm-2.png" type="Texture" id=3]
+[ext_resource path="res://assets/enemies/machine-small 1.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 605, 348 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "shovel"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Machine/machine-arm:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 266, -210 ), Vector2( 207, -363 ), Vector2( 0, -468 ), Vector2( 207, -363 ), Vector2( 266, -210 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Machine/machine-arm:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -30.0, -59.9999, -30.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Machine/machine-arm-2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 509, 60 ), Vector2( 607, -235 ), Vector2( 477, -643 ), Vector2( 607, -235 ), Vector2( 509, 60 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Machine/machine-arm-2:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -74.9999, -135.0, -75.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "vibrate"
+length = 0.4
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Machine:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 15 ), Vector2( 0, 1.90735e-006 ), Vector2( 0, -15 ), Vector2( 0, 0 ) ]
+}
+
+[node name="Chaser" type="KinematicBody2D"]
+collision_layer = 2
+script = ExtResource( 1 )
+max_speed = Vector2( 200, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -53, 0 )
+shape = SubResource( 1 )
+
+[node name="Machine" type="Node2D" parent="."]
+
+[node name="machine-arm" type="Sprite" parent="Machine"]
+position = Vector2( 233.698, -293.767 )
+rotation = -0.286668
+texture = ExtResource( 2 )
+
+[node name="machine-arm-2" type="Sprite" parent="Machine"]
+position = Vector2( 562.655, -101.511 )
+rotation = -0.71667
+texture = ExtResource( 3 )
+
+[node name="machine-small 1" type="Sprite" parent="Machine"]
+position = Vector2( -126, 35 )
+texture = ExtResource( 4 )
+
+[node name="ShovelAnimation" type="AnimationPlayer" parent="."]
+autoplay = "shovel"
+anims/shovel = SubResource( 2 )
+
+[node name="VibrationAnimation" type="AnimationPlayer" parent="."]
+playback_speed = 1.5
+anims/vibrate = SubResource( 3 )

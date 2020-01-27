@@ -24,6 +24,10 @@ config/name="Rolph"
 run/main_scene="res://src/Levels/Level1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameController="*res://src/Controllers/GameController.tscn"
+
 [display]
 
 window/size/width=1920

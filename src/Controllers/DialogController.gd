@@ -29,12 +29,13 @@ func show_dialog(dialog: Array) -> void:
 	advance_dialog()
 	
 func advance_dialog() -> void:
+	if current_line == len(current_dialog):
+		stop_dialog()
+		return
 	var d: Dictionary = current_dialog[current_line]
 	set_text(d["text"])
 	set_avatar(d["name"], d["expression"])
 	current_line += 1
-	if current_line == len(current_dialog):
-		stop_dialog()
 	
 func stop_dialog() -> void:
 	visible = false

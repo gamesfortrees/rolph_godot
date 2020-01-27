@@ -3,7 +3,7 @@
 [ext_resource path="res://src/Triggers/DialogTrigger.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 26, 24 )
+extents = Vector2( 26, 25 )
 
 [node name="DialogTrigger" type="Area2D"]
 script = ExtResource( 1 )

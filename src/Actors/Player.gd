@@ -8,7 +8,7 @@ onready var jump_sound: AudioStreamPlayer = get_node("jump_sound")
 onready var hit_sound: AudioStreamPlayer = get_node("hit_sound")
 onready var default_face: Sprite = get_node("default")
 onready var jumping_face: Sprite = get_node("jump")
-onready var game_controller := get_node("/root/level/GameController")
+onready var game_controller := get_node("/root/GameController")
 
 var facing: int = 1
 var current_face: Sprite = default_face

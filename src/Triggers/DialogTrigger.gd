@@ -3,12 +3,14 @@ extends Area2D
 export (String, FILE, "*.json") var dialoge_file_path: String
 
 onready var dialog_controller = get_node("/root/level/UI/DialogController")
-var triggered: bool = false
+onready var game_controller = get_node("/root/GameController")
 
 func _on_body_entered(body: PhysicsBody2D) -> void:
-	if !triggered:
+	if body.layers != 1:
+		return
+	if !dialoge_file_path in game_controller.triggered_dialogs:
 		start()
-		triggered = true
+		game_controller.triggered_dialogs.append(dialoge_file_path)
 
 func start() -> void:
 	var dialog: Array = load_dialog(dialoge_file_path)
