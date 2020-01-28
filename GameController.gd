@@ -1,6 +1,6 @@
 extends Node
 
-var count: int = 0
+var seeds: int = 0
 var game_over: bool = false
 var triggered_dialogs: Array
 
@@ -12,15 +12,15 @@ func add_seed() -> void:
 	_update_seeds(1)
 	
 func subtract_seed() -> bool:
-	if count <= 0:
+	if seeds <= 0:
 		return false
 	_update_seeds(-1)
 	return true
 	
 func _update_seeds(change: int) -> void:
-	count += change
+	seeds += change
 	var count_label := get_node("/root/level/UI/HUD/HBoxContainer/MarginContainer/count")
-	count_label.text = String(count)
+	count_label.text = String(seeds)
 	
 func player_died() -> void:
 	get_tree().paused = true
@@ -29,7 +29,7 @@ func player_died() -> void:
 	game_over_ui.visible = true
 	
 func restart_level() -> void:
-	count = 0
+	seeds = 0
 	game_over = false
 	get_tree().paused = false
 	get_tree().reload_current_scene()

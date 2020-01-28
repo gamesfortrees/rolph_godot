@@ -2,13 +2,11 @@
 
 [ext_resource path="res://assets/structures/scaffolding_small.png" type="Texture" id=1]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 150, 14 )
 
 [node name="Scaffolding" type="StaticBody2D"]
 collision_layer = 8
-collision_mask = 0
 
 [node name="scaffolding_small" type="Sprite" parent="."]
 texture = ExtResource( 1 )

@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/enemies/machine-small 1.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 605, 348 )
+extents = Vector2( 605, 534 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "shovel"
@@ -85,7 +85,7 @@ script = ExtResource( 1 )
 max_speed = Vector2( 200, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -53, 0 )
+position = Vector2( -53, -164 )
 shape = SubResource( 1 )
 
 [node name="Machine" type="Node2D" parent="."]

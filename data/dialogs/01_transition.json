@@ -1,0 +1,32 @@
+[
+    {
+        "name": "rolph",
+        "expression": "",
+        "text": "Phew I made it. These excavators are horrible!"
+    },
+    {
+        "name": "douglas",
+        "expression": "angry",
+        "text": "You don’t say! You are not safe here, there are more coming. We need to stop them and save the forest or all trees are lost… including yourself!"
+    },
+    {
+        "name": "rolph",
+        "expression": "scared",
+        "text": "But how can I do this I’m just a tree, they won’t listen to me."
+    },
+    {
+        "name": "douglas",
+        "expression": "angry",
+        "text": "Well maybe you should have done something before…"
+    },
+    {
+        "name": "douglas",
+        "expression": "angry",
+        "text": "Still there is hope, but you have to find it yourself."
+    },
+    {
+        "name": "douglas",
+        "expression": "",
+        "text": "Come over here and I'll give you a shove in the right direction"
+    }
+]
