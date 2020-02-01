@@ -124,7 +124,8 @@ visible = false
 [node name="DouglasEmitter" parent="." instance=ExtResource( 3 )]
 position = Vector2( 628, -1727 )
 x_variance = 900.0
-frequency = 5.0
+frequency = 0.1
+max_num = 50
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 302, 301 )

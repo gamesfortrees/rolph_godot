@@ -24,7 +24,6 @@
 [ext_resource path="res://src/UI/HUD.tscn" type="PackedScene" id=22]
 [ext_resource path="res://src/UI/GameOver.tscn" type="PackedScene" id=23]
 
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 74, 0, 74, 80, 0, 80 )
 
