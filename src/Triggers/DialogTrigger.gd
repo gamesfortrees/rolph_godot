@@ -18,9 +18,9 @@ func start() -> void:
 	
 func load_dialog(file_path) -> Array:
 	var file = File.new()
-	assert file.file_exists(file_path)
+	assert(file.file_exists(file_path))
 	
 	file.open(file_path, file.READ)
 	var dialog = parse_json(file.get_as_text())
-	assert dialog.size() > 0
+	assert(dialog.size() > 0)
 	return dialog

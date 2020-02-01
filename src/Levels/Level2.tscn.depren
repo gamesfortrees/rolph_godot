@@ -1,19 +1,19 @@
 [gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/sounds/Game loops 3.wav" type="AudioStream" id=1]
-[ext_resource path="res://assets/backgrounds/day_scaled.png" type="Texture" id=2]
+[ext_resource path="res://assets/backgrounds/night_scaled.png" type="Texture" id=2]
 [ext_resource path="res://src/Objects/Seedling.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/box_small.png" type="Texture" id=4]
 [ext_resource path="res://assets/boulders/boulder_small.png" type="Texture" id=5]
 [ext_resource path="res://assets/transparent.png" type="Texture" id=6]
 [ext_resource path="res://src/Objects/boulder1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Objects/Boulder2.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Actors/Steve.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Actors/Berta.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Objects/Scaffolding.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Objects/Box.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/Objects/Portal.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/Levels/Level2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/Levels/Level2_old.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/Objects/Seed.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/Triggers/DialogTrigger.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/Controllers/DialogController.tscn" type="PackedScene" id=17]
@@ -105,6 +105,9 @@ margin_right = 13845.0
 margin_bottom = 640.0
 texture = ExtResource( 2 )
 stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Seedling" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3707, 483 )
