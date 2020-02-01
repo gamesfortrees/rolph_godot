@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/sounds/Game loops 3.wav" type="AudioStream" id=1]
 [ext_resource path="res://assets/backgrounds/night_scaled.png" type="Texture" id=2]
@@ -6,13 +6,12 @@
 [ext_resource path="res://assets/box_small.png" type="Texture" id=4]
 [ext_resource path="res://assets/boulders/boulder_small.png" type="Texture" id=5]
 [ext_resource path="res://assets/transparent.png" type="Texture" id=6]
-[ext_resource path="res://src/Objects/House.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Objects/Portal2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Levels/Level3.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Actors/Berta.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Objects/Scaffolding.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Objects/Box.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/Objects/Portal.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/Levels/Level2_old.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/Objects/Seed.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/Triggers/DialogTrigger.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/Controllers/DialogController.tscn" type="PackedScene" id=17]
@@ -225,17 +224,9 @@ scale = Vector2( 3, 3 )
 position = Vector2( 10882, 377 )
 scale = Vector2( 3, 3 )
 
-[node name="House" parent="." instance=ExtResource( 7 )]
-position = Vector2( 12443, 60 )
-
-[node name="Douglas" parent="." instance=ExtResource( 13 )]
-position = Vector2( 12205, 463 )
-scale = Vector2( 0.3, 0.3 )
-next_scene = ExtResource( 14 )
-
 [node name="TransitonDialogTrigger" parent="." instance=ExtResource( 16 )]
-position = Vector2( 12205, 429 )
-scale = Vector2( 2.5, 2.5 )
+position = Vector2( 11742, -194 )
+scale = Vector2( 2.5, 30 )
 dialoge_file_path = "res://data/dialogs/02_transition.json"
 
 [node name="Box5" parent="." instance=ExtResource( 11 )]
@@ -244,6 +235,10 @@ scale = Vector2( 3, 3 )
 
 [node name="Fire3" parent="." instance=ExtResource( 24 )]
 position = Vector2( 7145, 414 )
+
+[node name="Portal" parent="." instance=ExtResource( 7 )]
+position = Vector2( 12482, 481 )
+next_scene = ExtResource( 8 )
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 302, 301 )
