@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Actors/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/rolph/foot.png" type="Texture" id=2]
@@ -7,9 +7,12 @@
 [ext_resource path="res://assets/sounds/game-land.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/sounds/game-jump2.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/sounds/game-jump.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/rolph/close.png" type="Texture" id=8]
+[ext_resource path="res://assets/rolph/sad.png" type="Texture" id=9]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 41, 45 )
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 30.6282
+height = 35.2806
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 47, 49 )
@@ -19,7 +22,7 @@ resource_name = "running"
 length = 1.2
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("foot_left:position")
+tracks/0/path = NodePath("Legs/foot_left:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -28,10 +31,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.4, 0.8, 1.18564 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -10, 48 ), Vector2( -7.15256e-007, 38 ), Vector2( 10, 45 ), Vector2( -10, 48 ) ]
+"values": [ Vector2( -10, 48 ), Vector2( -7.15256e-07, 38 ), Vector2( 10, 45 ), Vector2( -10, 48 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("foot_right:position")
+tracks/1/path = NodePath("Legs/foot_right:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -40,20 +43,31 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4, 0.8, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 18, 37 ), Vector2( -1.90735e-006, 38 ), Vector2( -7, 40 ), Vector2( 18, 37 ) ]
+"values": [ Vector2( 18, 37 ), Vector2( -1.90735e-06, 38 ), Vector2( -7, 40 ), Vector2( 18, 37 ) ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("default:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.4, 0.8, 1.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 4.0, -4.0, 0.0 ]
-}
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "scared",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "sad",
+"speed": 5.0
+} ]
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 8
@@ -61,7 +75,7 @@ script = ExtResource( 1 )
 max_speed = Vector2( 800, 1400 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2( 350, 0 )
@@ -88,25 +102,6 @@ shape = SubResource( 2 )
 playback_speed = 2.5
 anims/running = SubResource( 3 )
 
-[node name="foot_right" type="Sprite" parent="."]
-position = Vector2( 18, 37 )
-scale = Vector2( 0.275862, 0.275862 )
-texture = ExtResource( 2 )
-
-[node name="default" type="Sprite" parent="."]
-scale = Vector2( 0.227612, 0.227612 )
-texture = ExtResource( 3 )
-
-[node name="jump" type="Sprite" parent="."]
-visible = false
-scale = Vector2( 0.228, 0.228 )
-texture = ExtResource( 4 )
-
-[node name="foot_left" type="Sprite" parent="."]
-position = Vector2( -10, 48 )
-scale = Vector2( 0.275862, 0.275862 )
-texture = ExtResource( 2 )
-
 [node name="land_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
 
@@ -116,5 +111,21 @@ attenuation = 0.00515433
 
 [node name="hit_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.228, 0.228 )
+frames = SubResource( 4 )
+
+[node name="Legs" type="Node2D" parent="."]
+
+[node name="foot_right" type="Sprite" parent="Legs"]
+position = Vector2( 18, 37 )
+scale = Vector2( 0.275862, 0.275862 )
+texture = ExtResource( 2 )
+
+[node name="foot_left" type="Sprite" parent="Legs"]
+position = Vector2( -10, 48 )
+scale = Vector2( 0.275862, 0.275862 )
+texture = ExtResource( 2 )
 [connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]
 [connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]
