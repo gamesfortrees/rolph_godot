@@ -17,6 +17,9 @@ custom_constants/margin_right = 100
 custom_constants/margin_left = 100
 custom_constants/margin_bottom = 100
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 rolph_neutral = ExtResource( 2 )
 douglas_neutral = ExtResource( 3 )
 douglas_angry = ExtResource( 4 )

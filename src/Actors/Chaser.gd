@@ -1,10 +1,15 @@
 extends Actor
 
+onready var game_controller := get_node("/root/GameController")
+
 export var stop_time: float = 2.0
 var stopped := false
 
 func _ready() -> void:
-	_velocity.x = max_speed.x
+	var speed := max_speed.x
+	if game_controller.difficult:
+		speed *= 1.2
+	_velocity.x = speed
 
 func _physics_process(delta: float) -> void:
 	if stopped:
@@ -13,5 +18,8 @@ func _physics_process(delta: float) -> void:
 	
 func stop() -> void:
 	stopped = true
-	yield(get_tree().create_timer(stop_time), "timeout")
+	var adjusted_time := stop_time
+	if game_controller.difficult:
+		adjusted_time *= 0.8
+	yield(get_tree().create_timer(adjusted_time), "timeout")
 	stopped = false

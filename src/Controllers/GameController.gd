@@ -3,6 +3,7 @@ extends Node
 var seeds: int = 0
 var game_over: bool = false
 var triggered_dialogs: Array
+var difficult: bool = false
 
 func _physics_process(delta: float) -> void:
 	if game_over and Input.is_action_just_pressed("jump"):
@@ -33,3 +34,6 @@ func restart_level() -> void:
 	game_over = false
 	get_tree().paused = false
 	get_tree().reload_current_scene()
+	
+func set_difficult(diff: bool) -> void:
+	difficult = diff
