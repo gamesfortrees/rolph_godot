@@ -243,4 +243,3 @@ next_scene = ExtResource( 8 )
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 302, 301 )
-max_speed = Vector2( 600, 1300 )

@@ -96,4 +96,5 @@ anims/Rotate = SubResource( 2 )
 
 [node name="ArmPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Swing"
+playback_speed = 0.6
 anims/Swing = SubResource( 3 )

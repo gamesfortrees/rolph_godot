@@ -171,7 +171,6 @@ scale = Vector2( 0.9, 0.9 )
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 302, 301 )
-max_speed = Vector2( 600, 1300 )
 
 [node name="Douglas" parent="." instance=ExtResource( 13 )]
 position = Vector2( 10528, -154 )

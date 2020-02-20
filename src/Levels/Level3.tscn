@@ -124,11 +124,13 @@ visible = false
 [node name="DouglasEmitter" parent="." instance=ExtResource( 3 )]
 position = Vector2( 628, -1727 )
 x_variance = 900.0
-frequency = 0.1
+frequency = 4.0
 max_num = 50
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 302, 301 )
+max_speed = Vector2( 600, 1500 )
+gravity = 2500.0
 
 [node name="Camera2D" parent="Player" index="1"]
 limit_left = 1130
